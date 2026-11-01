@@ -108,39 +108,31 @@ does. Security isn't a feature you bolt on at the end.
 
 <h2 align="center">⟨ signal ⟩</h2>
 
+<!-- Theme switching uses GitHub's #gh-dark-mode-only / #gh-light-mode-only image suffixes,
+     NOT <picture><source media="(prefers-color-scheme: dark)">.
+     Reason: prefers-color-scheme follows the VIEWER'S OPERATING SYSTEM, while GitHub's page
+     theme is an account setting. Mismatched combos (dark GitHub + light OS) rendered light
+     cards on a dark page. The fragment approach keys off the real GitHub theme.
+     One rule: these must be plain <img src>, not <picture>, for GitHub to honour the suffix. -->
+
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)"
-    srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github_dark" />
-  <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github" alt="GitHub stats"/>
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)"
-    srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github_dark" />
-  <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github" alt="Top languages"/>
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)"
-    srcset="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github_dark&utcOffset=2" />
-  <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github&utcOffset=2" alt="Productive time"/>
-</picture>
+<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github_dark#gh-dark-mode-only" alt="GitHub stats"/>
+<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github#gh-light-mode-only" alt="GitHub stats"/>
+<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github_dark#gh-dark-mode-only" alt="Top languages"/>
+<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github#gh-light-mode-only" alt="Top languages"/>
+<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github_dark&utcOffset=2#gh-dark-mode-only" alt="Productive time"/>
+<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github&utcOffset=2#gh-light-mode-only" alt="Productive time"/>
 
 <br/><br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)"
-    srcset="https://streak-stats.demolab.com?user=Antkkorc&hide_border=true&background=0d1117&stroke=a855f7&ring=ff2d95&fire=00f0ff&currStreakLabel=ff2d95&sideLabels=c9d1d9&dates=8b949e&currStreakNum=ffffff&sideNums=ffffff&border_radius=12" />
-  <img src="https://streak-stats.demolab.com?user=Antkkorc&hide_border=true&background=ffffff&stroke=a855f7&ring=d6006e&fire=0077b6&currStreakLabel=d6006e&sideLabels=24292f&dates=57606a&currStreakNum=24292f&sideNums=24292f&border_radius=12" alt="GitHub streak"/>
-</picture>
+<img src="https://streak-stats.demolab.com?user=Antkkorc&hide_border=true&background=0d1117&stroke=a855f7&ring=ff2d95&fire=00f0ff&currStreakLabel=ff2d95&sideLabels=c9d1d9&dates=8b949e&currStreakNum=ffffff&sideNums=ffffff&border_radius=12#gh-dark-mode-only" alt="GitHub streak"/>
+<img src="https://streak-stats.demolab.com?user=Antkkorc&hide_border=true&background=ffffff&stroke=a855f7&ring=d6006e&fire=0077b6&currStreakLabel=d6006e&sideLabels=24292f&dates=57606a&currStreakNum=24292f&sideNums=24292f&border_radius=12#gh-light-mode-only" alt="GitHub streak"/>
 
 <br/><br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)"
-    srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github_dark" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github" width="100%" alt="Profile details and contribution calendar"/>
-</picture>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github_dark#gh-dark-mode-only" width="100%" alt="Profile details and contribution calendar"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github#gh-light-mode-only" width="100%" alt="Profile details and contribution calendar"/>
 
 </div>
 
@@ -152,10 +144,8 @@ does. Security isn't a feature you bolt on at the end.
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://ghchart.rshah.org/ff2d95/Antkkorc" />
-  <img src="https://ghchart.rshah.org/d6006e/Antkkorc" width="100%" alt="Contribution chart"/>
-</picture>
+<img src="https://ghchart.rshah.org/ff2d95/Antkkorc#gh-dark-mode-only" width="100%" alt="Contribution chart"/>
+<img src="https://ghchart.rshah.org/d6006e/Antkkorc#gh-light-mode-only" width="100%" alt="Contribution chart"/>
 
 </div>
 
