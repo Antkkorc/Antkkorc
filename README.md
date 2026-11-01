@@ -98,7 +98,13 @@ does. Security isn't a feature you bolt on at the end.
 <br/>
 
 <!-- ── STATS ───────────────────────────────────────────────────────────── -->
-<!-- THEME: bg 0d1117 · titles ff2d95 · icons 00f0ff · text c9d1d9 · accent a855f7 -->
+<!-- THEME: bg 0d1117 · titles ff2d95 · icons 00f0ff · text c9d1d9 · accent a855f7
+     WIDGET STATUS re-verified 2026-11-01, every URL below returns HTTP 200 with real data:
+       · github-readme-stats.vercel.app     -> DEPLOYMENT_PAUSED  (dead, removed)
+       · github-profile-trophy.vercel.app   -> DEPLOYMENT_DISABLED (dead, removed)
+       · github-readme-activity-graph       -> DEPLOYMENT_DISABLED (dead, removed)
+     Replaced with github-profile-summary-cards + ghchart, both live. If those ever die,
+     re-run the probe before swapping anything back in. -->
 
 <h2 align="center">⟨ signal ⟩</h2>
 
@@ -106,14 +112,18 @@ does. Security isn't a feature you bolt on at the end.
 
 <picture>
   <source media="(prefers-color-scheme: dark)"
-    srcset="https://github-readme-stats.vercel.app/api?username=Antkkorc&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=ff2d95&icon_color=00f0ff&text_color=c9d1d9&border_radius=12" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Antkkorc&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=ffffff&title_color=d6006e&icon_color=0077b6&text_color=24292f&border_radius=12" alt="Antonio's GitHub stats"/>
+    srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github_dark" />
+  <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github" alt="GitHub stats"/>
 </picture>
-
 <picture>
   <source media="(prefers-color-scheme: dark)"
-    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Antkkorc&layout=compact&langs_count=8&hide_border=true&bg_color=0d1117&title_color=ff2d95&text_color=c9d1d9&border_radius=12" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Antkkorc&layout=compact&langs_count=8&hide_border=true&bg_color=ffffff&title_color=d6006e&text_color=24292f&border_radius=12" alt="Top languages"/>
+    srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github_dark" />
+  <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github" alt="Top languages"/>
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+    srcset="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github_dark&utcOffset=2" />
+  <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github&utcOffset=2" alt="Productive time"/>
 </picture>
 
 <br/><br/>
@@ -126,19 +136,26 @@ does. Security isn't a feature you bolt on at the end.
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Antkkorc&bg_color=0d1117&color=00f0ff&line=ff2d95&point=ffffff&area=true&hide_border=true&radius=12" width="100%" alt="Activity graph"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+    srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github_dark" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github" width="100%" alt="Profile details and contribution calendar"/>
+</picture>
 
 </div>
 
 <br/>
 
-<!-- ── TROPHIES ────────────────────────────────────────────────────────── -->
+<!-- ── CONTRIBUTIONS ───────────────────────────────────────────────────── -->
 
-<h2 align="center">⟨ trophies ⟩</h2>
+<h2 align="center">⟨ contributions ⟩</h2>
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=Antkkorc&theme=algolia&no-frame=true&no-bg=true&margin-w=12&margin-h=12&column=7" width="100%" alt="Trophies"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://ghchart.rshah.org/ff2d95/Antkkorc" />
+  <img src="https://ghchart.rshah.org/d6006e/Antkkorc" width="100%" alt="Contribution chart"/>
+</picture>
 
 </div>
 
