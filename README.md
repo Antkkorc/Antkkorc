@@ -108,32 +108,38 @@ does. Security isn't a feature you bolt on at the end.
 
 <h2 align="center">⟨ signal ⟩</h2>
 
-<!-- Theme switching uses GitHub's #gh-dark-mode-only / #gh-light-mode-only image suffixes,
-     NOT <picture><source media="(prefers-color-scheme: dark)">.
-     Reason: prefers-color-scheme follows the VIEWER'S OPERATING SYSTEM, while GitHub's page
-     theme is an account setting. Mismatched combos (dark GitHub + light OS) rendered light
-     cards on a dark page. The fragment approach keys off the real GitHub theme.
-     One rule: these must be plain <img src>, not <picture>, for GitHub to honour the suffix. -->
+<!-- THEME SWITCHING — how this actually works (verified in a real browser, 2026-11-01):
+     GitHub ships CSS of the form
+       :root[data-color-mode="dark"] .readme [href$="#gh-light-mode-only"] { display:none }
+     i.e. the fragment must be on an <a href>, NOT on <img src>. Putting #gh-dark-mode-only
+     directly in an img src does nothing — both variants render. And <picture><source
+     media="(prefers-color-scheme: dark)"> tracks the VIEWER'S OS, not their GitHub theme,
+     which is why the earlier version showed light cards on a dark page.
+     So: <a href="#gh-...-mode-only"><img></a> is the only construct that follows the
+     viewer's real GitHub theme setting.
+
+     Widget availability re-verified 2026-11-01 (all HTTP 200 with real data):
+       github-readme-stats.vercel.app     DEPLOYMENT_PAUSED   -> removed
+       github-profile-trophy.vercel.app   DEPLOYMENT_DISABLED -> removed
+       github-readme-activity-graph       DEPLOYMENT_DISABLED -> removed
+     Live replacements: github-profile-summary-cards + ghchart + streak-stats.demolab.com -->
 
 <div align="center">
 
-<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github_dark#gh-dark-mode-only" alt="GitHub stats"/>
-<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github#gh-light-mode-only" alt="GitHub stats"/>
-<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github_dark#gh-dark-mode-only" alt="Top languages"/>
-<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github#gh-light-mode-only" alt="Top languages"/>
-<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github_dark&utcOffset=2#gh-dark-mode-only" alt="Productive time"/>
-<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github&utcOffset=2#gh-light-mode-only" alt="Productive time"/>
-
+<a href="#gh-dark-mode-only"><img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github_dark" alt=""/></a>
+<a href="#gh-light-mode-only"><img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Antkkorc&theme=github" alt=""/></a>
+<a href="#gh-dark-mode-only"><img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github_dark" alt=""/></a>
+<a href="#gh-light-mode-only"><img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Antkkorc&theme=github" alt=""/></a>
+<a href="#gh-dark-mode-only"><img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github_dark&utcOffset=2" alt=""/></a>
+<a href="#gh-light-mode-only"><img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Antkkorc&theme=github&utcOffset=2" alt=""/></a>
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=Antkkorc&hide_border=true&background=0d1117&stroke=a855f7&ring=ff2d95&fire=00f0ff&currStreakLabel=ff2d95&sideLabels=c9d1d9&dates=8b949e&currStreakNum=ffffff&sideNums=ffffff&border_radius=12#gh-dark-mode-only" alt="GitHub streak"/>
-<img src="https://streak-stats.demolab.com?user=Antkkorc&hide_border=true&background=ffffff&stroke=a855f7&ring=d6006e&fire=0077b6&currStreakLabel=d6006e&sideLabels=24292f&dates=57606a&currStreakNum=24292f&sideNums=24292f&border_radius=12#gh-light-mode-only" alt="GitHub streak"/>
-
+<a href="#gh-dark-mode-only"><img src="https://streak-stats.demolab.com?user=Antkkorc&hide_border=true&background=0d1117&stroke=a855f7&ring=ff2d95&fire=00f0ff&currStreakLabel=ff2d95&sideLabels=c9d1d9&dates=8b949e&currStreakNum=ffffff&sideNums=ffffff&border_radius=12" alt=""/></a>
+<a href="#gh-light-mode-only"><img src="https://streak-stats.demolab.com?user=Antkkorc&hide_border=true&background=ffffff&stroke=a855f7&ring=d6006e&fire=0077b6&currStreakLabel=d6006e&sideLabels=24292f&dates=57606a&currStreakNum=24292f&sideNums=24292f&border_radius=12" alt=""/></a>
 <br/><br/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github_dark#gh-dark-mode-only" width="100%" alt="Profile details and contribution calendar"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github#gh-light-mode-only" width="100%" alt="Profile details and contribution calendar"/>
-
+<a href="#gh-dark-mode-only"><img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github_dark" alt=""/></a>
+<a href="#gh-light-mode-only"><img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Antkkorc&theme=github" alt=""/></a>
 </div>
 
 <br/>
@@ -144,9 +150,8 @@ does. Security isn't a feature you bolt on at the end.
 
 <div align="center">
 
-<img src="https://ghchart.rshah.org/ff2d95/Antkkorc#gh-dark-mode-only" width="100%" alt="Contribution chart"/>
-<img src="https://ghchart.rshah.org/d6006e/Antkkorc#gh-light-mode-only" width="100%" alt="Contribution chart"/>
-
+<a href="#gh-dark-mode-only"><img width="100%" src="https://ghchart.rshah.org/ff2d95/Antkkorc" alt=""/></a>
+<a href="#gh-light-mode-only"><img width="100%" src="https://ghchart.rshah.org/d6006e/Antkkorc" alt=""/></a>
 </div>
 
 <br/>
