@@ -145,16 +145,10 @@ does. Security isn't a feature you bolt on at the end.
 <br/>
 
 <!-- ── CONTRIBUTIONS ───────────────────────────────────────────────────── -->
-
-<h2 align="center">⟨ contributions ⟩</h2>
-
-<div align="center">
-
-<a href="#gh-dark-mode-only"><img width="100%" src="https://ghchart.rshah.org/ff2d95/Antkkorc" alt=""/></a>
-<a href="#gh-light-mode-only"><img width="100%" src="https://ghchart.rshah.org/d6006e/Antkkorc" alt=""/></a>
-</div>
-
-<br/>
+<!-- A standalone ghchart contribution band was tried here and removed: ghchart hard-codes
+     light-grey empty cells, so in GitHub's dark theme it renders as a bright grey slab.
+     The github-profile-summary-cards "profile-details" card above already includes a
+     contribution calendar that respects the theme. One less dependency, one less thing to rot. -->
 
 <!-- ── SNAKE ───────────────────────────────────────────────────────────── -->
 <!-- assets/snake-dark.svg is a self-contained animated SVG (pure SMIL, no JS),
